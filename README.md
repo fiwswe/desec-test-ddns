@@ -1,7 +1,7 @@
 # desec-test-ddns
 Test the [deSEC e.V.](https://desec.io) dynDNS [IP Update API](https://desec.readthedocs.io/en/latest/dyndns/update-api.html) with detailed logs
 
-This script was written for [OpenBSD 7.6](https://openbsd.org/76.html). It uses curl(1) to call the deSEC [IP Update API](https://desec.readthedocs.io/en/latest/dyndns/update-api.html) and keeps a detailed log of the results.
+This script was written for [OpenBSD 7.6](https://openbsd.org/76.html). It uses curl(1) to call the deSEC [IP Update API](https://desec.readthedocs.io/en/latest/dyndns/update-api.html) and keeps a detailed log of the results. On other platforms some changes might be required.
 
 **IMPORTANT:** This should only be used sparingly as it consumes resources at [deSEC e.V.](https://desec.io) without any benefit other than producing the log.
 
