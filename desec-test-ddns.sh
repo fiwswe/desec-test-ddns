@@ -22,8 +22,8 @@ DESEC_TOKEN='CHANGE_ME'				# <= User setting, please change
 
 API_URL='https://update.dedyn.io?'
 AUTH_HEADER="Authorization: Token ${DESEC_TOKEN}"
-IPv4_ADDR='192.51.0.'
-IPv6_ADDR='2001:db8::192:51:0:'
+IPv4_ADDR='198.51.100.'
+IPv6_ADDR='2001:db8::198:51:100:'
 DELAY=70
 
 # Note: The following paths are correct for OpenBSD 7.6. Adjust if needed for other platforms.
