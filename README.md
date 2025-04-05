@@ -16,8 +16,8 @@ After the update attempt the script sleeps for an adjustable time (default 70 se
 * Make sure curl(1) is installed from ports: `pkg_add curl`
 * Before running the script adjust the `DDNS_HOST` and `DESEC_TOKEN` values to match your domain and deSEC account.
 * Depending on what you want to test, leave exactly one of the lines containing the curl(1) command uncommented. You can choose between IPv4/IPv6 and HTTP/1.1 and HTTP/2 in any combination.
-* Since the script contains secrets it is advisable to protect access to its source code. `chmod 700 desec-test-ddns.sh` might be what you want.
-* The log will also contain secrets. So protecting it as follows may be indicated as well: `touch desec-test-ddns.log;chmod 600 desec-test-ddns.log`
+* **SECURITY:** Since the script contains secrets it is advisable to protect access to its source code. `chmod 700 desec-test-ddns.sh` might be what you want.
+* **SECURITY:** The log will also contain secrets. So protecting it as follows may be indicated as well: `touch desec-test-ddns.log;chmod 600 desec-test-ddns.log`
 
 
 ## Running the script
