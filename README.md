@@ -14,6 +14,6 @@ This script was written for [OpenBSD 7.6](https://openbsd.org/76.html). It uses 
 
 
 ## Running the script
-Either run the script manually (without any parameters) or use e.g. cron(1) to run it in regular intervals. Don't forget tur disable this later when the test is done.
+Either run the script manually (without any parameters) or use e.g. cron(1) to run it at regular intervals. Don't forget to disable this later when the test is done.
 For example, runing the script every 5 minutes would require a crontab(5) entry similar to this (adjust the path to match your setup):
 `*/5	*	*	*	*	/home/username/test/desec/desec-test-ddns.sh >/dev/null`
