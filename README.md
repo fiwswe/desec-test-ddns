@@ -10,7 +10,7 @@ Each time this script is run it attempts to use the deSEC [IP Update API](https:
 
 To keep things simple the log file will use the same basename and path as the script.
 
-After the update attempt the script sleeps for an adjustable time (default 70 seconds) and then attempts to query the deSEC NS for the current values of the `A` and `AAAA` records. The result is also writen to the log.
+After the update attempt the script sleeps for an adjustable time (default 70 seconds) and then attempts to query the deSEC NS for the current values of the `A` and `AAAA` records. The result is also written to the log.
 
 ## Setup
 * Make sure curl(1) is installed from ports: `pkg_add curl`
