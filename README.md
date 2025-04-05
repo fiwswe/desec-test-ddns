@@ -5,6 +5,13 @@ This script was written for [OpenBSD 7.6](https://openbsd.org/76.html). It uses 
 
 **IMPORTANT:** This should only be used sparingly as it consumes resources at [deSEC e.V.](https://desec.io) without any benefit other than producing the log.
 
+## What this script does
+Each time this script is run it attempts to use the deSEC [IP Update API](https://desec.readthedocs.io/en/latest/dyndns/update-api.html) to set the `A` and `AAAA` records of the configured host to randomly varying fake (example) IPs. A detailed log is produced. It will contain details regarding name resolution, TLS and HTTP headers, as well as the HTTP response.
+
+To keep things simple the log file will use the same basename and path as the script.
+
+After the update attempt the script sleeps for an adjustable time (default 70 seconds) and then attempts to query the deSEC NS for the current values of the `A` and `AAAA` records. The result is also writen to the log.
+
 ## Setup
 * Make sure curl(1) is installed from ports: `pkg_add curl`
 * Before running the script adjust the `DDNS_HOST` and `DESEC_TOKEN` values to match your domain and deSEC account.
