@@ -1,7 +1,7 @@
 # desec-test-ddns
 Test the [deSEC e.V.](https://desec.io) dynDNS [IP Update API](https://desec.readthedocs.io/en/latest/dyndns/update-api.html) with detailed logs
 
-This script was written for [OpenBSD 7.6](https://openbsd.org/76.html). It uses curl(1) to call the deSEC [IP Update API](https://desec.readthedocs.io/en/latest/dyndns/update-api.html) and keeps a detailed log of the results. On other platforms some changes might be required.
+This script was written for [OpenBSD 7.6](https://openbsd.org/76.html). It uses [curl(1)](https://curl.se) to call the deSEC [IP Update API](https://desec.readthedocs.io/en/latest/dyndns/update-api.html) and keeps a detailed log of the results. On other platforms some changes might be required.
 
 **IMPORTANT:** This should only be used sparingly as it consumes resources at [deSEC e.V.](https://desec.io) without any benefit other than producing the log.
 
@@ -13,7 +13,8 @@ To keep things simple the log file will use the same basename and path as the sc
 After the update attempt the script sleeps for an adjustable time (default 70 seconds) and then attempts to query the deSEC NS for the current values of the `A` and `AAAA` records. The result is also written to the log.
 
 ## Setup
-* Make sure curl(1) is installed from ports: `pkg_add curl`
+* You need an account at deSEC and a domain with DNS hosting there. Either a domain you registered elsewhere or a subdomain of `dedyn.io` will work fine for this.
+* Make sure [curl(1)](https://curl.se) is installed from ports: `pkg_add curl`
 * Before running the script adjust the `DDNS_HOST` and `DESEC_TOKEN` values to match your domain and deSEC account.
 * Depending on what you want to test, leave exactly one of the lines containing the curl(1) command uncommented. You can choose between IPv4/IPv6 and HTTP/1.1 and HTTP/2 in any combination.
 * **SECURITY:** Since the script contains secrets it is advisable to protect access to its source code. `chmod 700 desec-test-ddns.sh` might be what you want.
